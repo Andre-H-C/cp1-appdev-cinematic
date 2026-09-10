@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Faz o site se adaptar corretamente a celulares e tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic</title>
+    <!-- CSS separado, como pedido no projeto. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho principal do site. -->
+    <header class="cabecalho">
+        <div class="identidade">
+            <h1>Cinematic</h1>
+            <p>de olho na sétima arte</p>
+        </div>
+
+        <!-- Campo de busca controlado pelo JavaScript. -->
+        <div class="busca">
+            <input type="text" id="campoBusca" placeholder="Buscar filme...">
+            <button onclick="buscarFilmes()">Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Filmes em destaque</h2>
+            <p>Uma seleção de obras de Darren Aronofsky e Martin Scorsese.</p>
+        </section>
+
+        <!-- Grid com os oito filmes. -->
+        <section class="catalogo" id="catalogo">
+            <!-- Card 1 -->
+            <article class="filme destaque">
+                <img src="./img/cisne.jpg" alt="Pôster do filme Cisne Negro">
+                <div class="conteudo-filme">
+                    <p class="diretor">Darren Aronofsky</p>
+                    <h2>Cisne Negro</h2>
+                    <p>Nina Sayers é uma bailarina dedicada que consegue o papel principal em O Lago dos Cisnes. A busca pela perfeição e a pressão da companhia fazem sua realidade começar a se desintegrar.</p>
+                    <p class="genero">Drama psicológico</p>
+                    <button onclick="mostrarDetalhes('Cisne Negro')">Ver detalhes</button>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="filme">
+                <img src="./img/noe.jpg" alt="Pôster do filme Noé">
+                <div class="conteudo-filme">
+                    <p class="diretor">Darren Aronofsky</p>
+                    <h2>Noé</h2>
+                    <p>Inspirado na história bíblica de Noé, o filme acompanha um homem atormentado por visões de uma grande catástrofe e sua missão de preservar a vida diante de um mundo em colapso.</p>
+                    <p class="genero">Drama épico</p>
+                    <button onclick="mostrarDetalhes('Noé')">Ver detalhes</button>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="filme">
+                <img src="./img/requiem.jpg" alt="Pôster do filme Réquiem para um Sonho">
+                <div class="conteudo-filme">
+                    <p class="diretor">Darren Aronofsky</p>
+                    <h2>Réquiem para um Sonho</h2>
+                    <p>Quatro personagens perseguem sonhos diferentes, mas seus desejos acabam se transformando em obsessões. O filme retrata de forma brutal a deterioração causada pelo vício e pela dependência.</p>
+                    <p class="genero">Drama</p>
+                    <button onclick="mostrarDetalhes('Réquiem para um Sonho')">Ver detalhes</button>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="filme">
+                <img src="./img/baleia.jpg" alt="Pôster do filme A Baleia">
+                <div class="conteudo-filme">
+                    <p class="diretor">Darren Aronofsky</p>
+                    <h2>A Baleia</h2>
+                    <p>Charlie, um professor de inglês que vive recluso e enfrenta uma grave condição de saúde, tenta reconstruir sua relação com a filha enquanto lida com culpa, isolamento e arrependimento.</p>
+                    <p class="genero">Drama</p>
+                    <button onclick="mostrarDetalhes('A Baleia')">Ver detalhes</button>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="filme">
+                <img src="./img/silencio.jpg" alt="Pôster do filme Silêncio">
+                <div class="conteudo-filme">
+                    <p class="diretor">Martin Scorsese</p>
+                    <h2>Silêncio</h2>
+                    <p>Dois padres jesuítas viajam ao Japão do século XVII para procurar seu mentor desaparecido e testemunham a perseguição aos cristãos, colocando sua fé diante de situações extremas.</p>
+                    <p class="genero">Drama histórico</p>
+                    <button onclick="mostrarDetalhes('Silêncio')">Ver detalhes</button>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="filme">
+                <img src="./img/lobo.jpg" alt="Pôster do filme O Lobo de Wall Street">
+                <div class="conteudo-filme">
+                    <p class="diretor">Martin Scorsese</p>
+                    <h2>O Lobo de Wall Street</h2>
+                    <p>Jordan Belfort constrói uma enorme fortuna como corretor de ações em meio a um ambiente de excesso, fraude e corrupção. Sua ascensão é acompanhada pela deterioração de sua vida pessoal e profissional.</p>
+                    <p class="genero">Comédia dramática</p>
+                    <button onclick="mostrarDetalhes('O Lobo de Wall Street')">Ver detalhes</button>
+                </div>
+            </article>
+
+            <!-- Card 7 -->
+            <article class="filme">
+                <img src="./img/companheiros.jpg" alt="Pôster do filme Os Bons Companheiros">
+                <div class="conteudo-filme">
+                    <p class="diretor">Martin Scorsese</p>
+                    <h2>Os Bons Companheiros</h2>
+                    <p>Henry Hill cresce fascinado pelo mundo da máfia e entra para uma organização criminosa. O poder, o dinheiro e o prestígio conquistados dão lugar a paranoia, violência e consequências cada vez maiores.</p>
+                    <p class="genero">Crime</p>
+                    <button onclick="mostrarDetalhes('Os Bons Companheiros')">Ver detalhes</button>
+                </div>
+            </article>
+
+            <!-- Card 8 -->
+            <article class="filme">
+                <img src="./img/infiltrados.jpg" alt="Pôster do filme Os Infiltrados">
+                <div class="conteudo-filme">
+                    <p class="diretor">Martin Scorsese</p>
+                    <h2>Os Infiltrados</h2>
+                    <p>Um policial se infiltra em uma organização criminosa enquanto um informante da mesma organização entra para a polícia. Os dois lados tentam descobrir quem é o infiltrado antes que suas identidades sejam reveladas.</p>
+                    <p class="genero">Crime e suspense</p>
+                    <button onclick="mostrarDetalhes('Os Infiltrados')">Ver detalhes</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- O JavaScript escreve aqui o resultado da busca. -->
+        <p id="mensagemBusca" class="mensagem"></p>
+    </main>
+
+    <footer class="rodape">Cinematic @2026 - Projeto de Application Development</footer>
+
+    <!-- JavaScript separado do HTML. -->
+    <script src="script.js"></script>
+</body>
+</html>

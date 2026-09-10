@@ -1,0 +1,236 @@
+/*
+    Cinematic - CSS do projeto
+    Paleta: preto como cor dominante, rosa como destaque e branco nos textos.
+*/
+
+/* Faz width/height incluírem padding e border. */
+* {
+    box-sizing: border-box;
+}
+
+/* Configuração geral da página. */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Cabeçalho principal. */
+.cabecalho {
+    max-width: 1200px;
+    margin: 0 auto 35px;
+    padding: 25px;
+    background-color: #000000;
+    border: 1px solid #ff69b4;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Nome do site. */
+.identidade h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 38px;
+    letter-spacing: 2px;
+}
+
+/* Subtítulo em rosa. */
+.identidade p {
+    margin: 5px 0 0;
+    color: #ff69b4;
+    font-size: 15px;
+}
+
+/* Área da busca. */
+.busca {
+    display: flex;
+    gap: 8px;
+}
+
+/* Campo de pesquisa. */
+input {
+    width: 230px;
+    padding: 10px;
+    background-color: #111111;
+    color: #ffffff;
+    border: 1px solid #ff69b4;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #bbbbbb;
+}
+
+/* Botões. */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff69b4;
+    color: #000000;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* :hover muda o botão quando o mouse passa por cima. */
+button:hover {
+    background-color: #ffb6d9;
+}
+
+/* Texto introdutório. */
+.intro {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+.intro h2 {
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.intro p {
+    margin-top: 0;
+    color: #dddddd;
+}
+
+/* Grid: quatro colunas em telas grandes. */
+.catalogo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Card individual. */
+.filme {
+    background-color: #0d0d0d;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Efeito quando o mouse passa pelo card. */
+.filme:hover {
+    transform: translateY(-5px);
+    border-color: #ff69b4;
+}
+
+/* Duas classes no mesmo elemento: filme + destaque. */
+.filme.destaque {
+    border: 2px solid #ff69b4;
+}
+
+/* Imagem/pôster. */
+.filme img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Espaçamento interno do conteúdo. */
+.conteudo-filme {
+    padding: 16px;
+}
+
+/* Diretor. */
+.diretor {
+    margin-top: 0;
+    color: #ff69b4;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Título do filme. */
+.conteudo-filme h2 {
+    margin: 8px 0;
+    color: #ffffff;
+    font-size: 21px;
+}
+
+/* Descrição. */
+.conteudo-filme > p:not(.diretor):not(.genero) {
+    color: #dddddd;
+    line-height: 1.5;
+}
+
+/* Gênero. */
+.genero {
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+/* Mensagem gerada pelo JavaScript. */
+.mensagem {
+    max-width: 1200px;
+    margin: 25px auto;
+    text-align: center;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+/* Rodapé. */
+.rodape {
+    max-width: 1200px;
+    margin: 35px auto 0;
+    padding: 15px;
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 12px;
+    border-top: 1px solid #222222;
+}
+
+/* Responsividade: quatro colunas viram duas. */
+@media (max-width: 1000px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .busca {
+        width: 100%;
+    }
+
+    .busca input {
+        flex: 1;
+        width: auto;
+    }
+}
+
+/* Responsividade: no celular fica uma coluna. */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .busca {
+        flex-direction: column;
+    }
+
+    .busca input,
+    .busca button {
+        width: 100%;
+    }
+
+    .identidade h1 {
+        font-size: 30px;
+    }
+}
