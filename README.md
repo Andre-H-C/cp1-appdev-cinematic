@@ -1,20 +1,19 @@
 # Cinematic
 
-Projeto de Application Development usando HTML, CSS e JavaScript.
+Check #1 de Application Development usando HTML, CSS e JavaScript.
 
 ## Tema
 Catálogo com quatro filmes de Darren Aronofsky e quatro de Martin Scorsese.
 
 ## Arquivos
-- index.html: estrutura da página e conteúdo.
-- style.css: cores, espaçamento, Grid, hover e responsividade.
-- script.js: funções JavaScript e busca de filmes.
+- index.html tem a estrutura da página e o conteúdo.
+- style.css tem as cores, o espaçamento, o grid, hover e a responsividade.
+- script.js tem a função de busca
 
 ## Conceitos utilizados
-- HTML: h1, h2, p, img, div, input, button e article.
-- CSS: padding, margin, color, background-color, seletores, hover, Grid e media queries.
-- JavaScript: functions, eventos, seleção de elementos e manipulação do DOM.
-- CSS e JavaScript em arquivos separados do HTML.
+- HTML: h1, h2, p, img, div, input, button, article
+- CSS: padding, margin, color, background-color, hover, grid
+- JavaScript: functions
 
 ## Execução
 Abra o index.html usando o Live Server do VS Code.
