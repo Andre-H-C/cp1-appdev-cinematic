@@ -2,21 +2,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <!-- Faz o site se adaptar corretamente a celulares e tablets. -->
+    <!-- faz ser responsivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinematic</title>
-    <!-- CSS separado, como pedido no projeto. -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabeçalho principal do site. -->
     <header class="cabecalho">
         <div class="identidade">
             <h1>Cinematic</h1>
             <p>de olho na sétima arte</p>
         </div>
 
-        <!-- Campo de busca controlado pelo JavaScript. -->
         <div class="busca">
             <input type="text" id="campoBusca" placeholder="Buscar filme...">
             <button onclick="buscarFilmes()">Buscar</button>
@@ -29,9 +26,8 @@
             <p>Uma seleção de obras de Darren Aronofsky e Martin Scorsese.</p>
         </section>
 
-        <!-- Grid com os oito filmes. -->
+        <!-- grids de filmes -->
         <section class="catalogo" id="catalogo">
-            <!-- Card 1 -->
             <article class="filme destaque">
                 <img src="./img/cisne.jpg" alt="Pôster do filme Cisne Negro">
                 <div class="conteudo-filme">
@@ -43,7 +39,6 @@
                 </div>
             </article>
 
-            <!-- Card 2 -->
             <article class="filme">
                 <img src="./img/noe.jpg" alt="Pôster do filme Noé">
                 <div class="conteudo-filme">
@@ -55,7 +50,6 @@
                 </div>
             </article>
 
-            <!-- Card 3 -->
             <article class="filme">
                 <img src="./img/requiem.jpg" alt="Pôster do filme Réquiem para um Sonho">
                 <div class="conteudo-filme">
@@ -67,7 +61,6 @@
                 </div>
             </article>
 
-            <!-- Card 4 -->
             <article class="filme">
                 <img src="./img/baleia.jpg" alt="Pôster do filme A Baleia">
                 <div class="conteudo-filme">
@@ -79,7 +72,6 @@
                 </div>
             </article>
 
-            <!-- Card 5 -->
             <article class="filme">
                 <img src="./img/silencio.jpg" alt="Pôster do filme Silêncio">
                 <div class="conteudo-filme">
@@ -91,7 +83,6 @@
                 </div>
             </article>
 
-            <!-- Card 6 -->
             <article class="filme">
                 <img src="./img/lobo.jpg" alt="Pôster do filme O Lobo de Wall Street">
                 <div class="conteudo-filme">
@@ -115,7 +106,6 @@
                 </div>
             </article>
 
-            <!-- Card 8 -->
             <article class="filme">
                 <img src="./img/infiltrados.jpg" alt="Pôster do filme Os Infiltrados">
                 <div class="conteudo-filme">
@@ -128,13 +118,12 @@
             </article>
         </section>
 
-        <!-- O JavaScript escreve aqui o resultado da busca. -->
+        <!-- resultado js -->
         <p id="mensagemBusca" class="mensagem"></p>
     </main>
 
     <footer class="rodape">Cinematic @2026 - Projeto de Application Development</footer>
 
-    <!-- JavaScript separado do HTML. -->
     <script src="script.js"></script>
 </body>
 </html>
